@@ -1,0 +1,12 @@
+<%- include("partials/header") -%> 
+
+<h1 style="margin-bottom: 2px;" ><%= j.title  %> </h1>
+<p  style="color:white; margin-bottom: 50px; margin-top: 0px; "><%= j.date  %> - <%= j.time  %></p>
+<p style="white-space: pre-wrap; width: 80%;" ><%= j.content %> </p>
+
+<form action="/delete" method="post">
+    
+    <button style="margin-top: 20px;" type="submit" value=" <%= j._id  %> " name="btn" class="btn" > DELETE</button>
+</form>
+
+<%- include("partials/footer") -%> 

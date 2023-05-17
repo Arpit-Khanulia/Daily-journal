@@ -1,0 +1,33 @@
+
+<%- include("partials/header") -%> 
+
+
+<h1 style="margin-bottom: 80px;">HOME</h1>
+
+<% if(result.length == 0){ %>
+
+     <div class="homebox">
+          <p>Go to compose to make a new post </p>
+          <button class="btn"><a href="/compose">Compose</a></button>
+
+     </div>
+
+
+<% } %>
+
+
+<% result.forEach(i=> { %>
+     
+     <h1 style="color: white; margin-bottom: 1px;"><%= i.title %> </h1>
+     <p style="color: #777777;"> <%= i.date %> - <%= i.time  %></p>
+     <p><%= i.content.substring(0,100) + "..." %> 
+     <a href="/post/<%= i.title  %> ">read more</a>
+     </p> 
+     <hr>
+<% } )%> 
+
+
+
+<%- include("partials/footer") -%> 
+
+
